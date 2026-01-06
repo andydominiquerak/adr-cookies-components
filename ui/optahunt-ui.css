@@ -1,287 +1,391 @@
-/******************************************************************
- * OPTAHUNT — SCOPED CSS
- * Variables are attached to the container to prevent global bleeding
- ******************************************************************/
+/* =========================================================
+   OPTAHUNT — SCOPED UI STYLES
+   Fully isolated from Divhunt builder
+   ========================================================= */
 
-.optahunt-panel {
-    /* Variables scoped to the panel container */
-    --bg-black: #0d0d0d;
-    --accent-purple: #7f03fc;
-    --input-bg: #1a1a1a;
-    --text-gray: #929292;
-    --text-white: #ffffff;
-    --border-gray: #222222;
-    --outer-border: #797979;
-    --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    
-    /* Panel font reset */
-    font-family: 'Inter', sans-serif;
-    line-height: 1.5;
+/* ------------------------------
+   CSS VARIABLES (SCOPED)
+-------------------------------- */
+#optahunt-floating-panel {
+  --bg-black: #0d0d0d;
+  --accent-purple: #7f03fc;
+  --input-bg: #1a1a1a;
+  --text-gray: #929292;
+  --text-white: #ffffff;
+  --border-gray: #222222;
+  --outer-border: #797979;
+  --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-family: 'Inter', sans-serif;
 }
 
-/* Scoped box-sizing */
-.optahunt-panel * { 
-    box-sizing: border-box; 
+/* ------------------------------
+   RESET (SCOPED)
+-------------------------------- */
+#optahunt-floating-panel *,
+#optahunt-floating-panel *::before,
+#optahunt-floating-panel *::after {
+  box-sizing: border-box;
 }
 
-/* Panel Shell */
-.optahunt-panel .optahunt-wrapper {
-    width: 30rem;
-    background: var(--bg-black);
-    border-radius: 40px;
-    padding: 32px;
-    border: 1px solid var(--border-gray);
-    color: var(--text-white);
+/* ------------------------------
+   PANEL SHELL
+-------------------------------- */
+#optahunt-floating-panel .optahunt-wrapper {
+  width: 30rem;
+  background: var(--bg-black);
+  border-radius: 40px;
+  padding: 32px;
+  border: 1px solid var(--border-gray);
 }
 
-/* Scoped Typography */
-.optahunt-panel p {
-    color: var(--text-gray); 
-    padding-left: 2rem;
-    padding-right: 2rem; 
-    margin: 1rem 0;
+/* ------------------------------
+   TEXT
+-------------------------------- */
+#optahunt-floating-panel p {
+  color: var(--text-gray);
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
-.optahunt-panel h2 {
-    margin: 0rem;
-    color: var(--text-white);
+#optahunt-floating-panel h2 {
+  margin: 0;
 }
 
-.optahunt-panel h3 { 
-    color: var(--text-white); 
-    font-size: 0.9rem; 
-    border-bottom: 1px solid var(--border-gray); 
-    padding-bottom: 12px; 
-    margin: 0 0 20px 0; 
-    font-weight: 400;
+#optahunt-floating-panel h3 {
+  color: var(--text-white);
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border-gray);
+  padding-bottom: 12px;
+  margin: 0 0 20px 0;
+  font-weight: 400;
 }
 
-/* Layout Components */
-.optahunt-panel .auth-icon-circle {
-    padding-bottom: 1rem;
+/* ------------------------------
+   AUTH / CONTAINERS
+-------------------------------- */
+#optahunt-floating-panel .auth-icon-circle {
+  padding-bottom: 1rem;
 }
 
-.optahunt-panel .auth-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0rem;
-    text-align: center;
-    align-items: center;
-    width: 100%;
-    color: var(--text-white);
+#optahunt-floating-panel .auth-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0rem;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  color: var(--text-white);
 }
 
-/* Outer Wrappers */
-.optahunt-panel .btn-outer, 
-.optahunt-panel .tab-outer {
-    background: transparent;
-    border: 2px solid var(--outer-border);
-    padding: 6px;
-    border-radius: 100px;
-    width: 100%;
-    margin-bottom: 12px;
-    transition: var(--transition);
+/* ------------------------------
+   OUTER WRAPPERS
+-------------------------------- */
+#optahunt-floating-panel .btn-outer,
+#optahunt-floating-panel .tab-outer {
+  background: transparent;
+  border: 2px solid var(--outer-border);
+  padding: 6px;
+  border-radius: 100px;
+  width: 100%;
+  margin-bottom: 12px;
+  transition: var(--transition);
 }
 
-.optahunt-panel .tab-outer { 
-    margin-bottom: 30px; 
-    border-width: 1px; 
+#optahunt-floating-panel .tab-outer {
+  margin-bottom: 30px;
+  border-width: 1px;
 }
 
-/* Header */
-.optahunt-panel .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
+/* ------------------------------
+   HEADER
+-------------------------------- */
+#optahunt-floating-panel .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
 }
 
-.optahunt-panel .header-right { 
-    display: flex; 
-    align-items: center; 
-    gap: 12px; 
+#optahunt-floating-panel .header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.optahunt-panel .brand-container { 
-    width: 8rem; 
+/* ------------------------------
+   BRAND / LOGO
+-------------------------------- */
+#optahunt-floating-panel .brand-container {
+  width: 8rem;
 }
 
-.optahunt-panel .logo-svg { 
-    width: 100%; 
-    height: auto; 
-    display: block; 
-    transition: var(--transition); 
+#optahunt-floating-panel .logo-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: var(--transition);
 }
 
-.optahunt-panel .logo-link:hover .logo-svg { 
-    opacity: 0.8; 
-    transform: scale(0.97); 
+#optahunt-floating-panel .logo-link:hover .logo-svg {
+  opacity: 0.8;
+  transform: scale(0.97);
 }
 
-/* Buttons & Interactive Elements */
-.optahunt-panel .choose-btn {
-    background-color: var(--border-gray);
-    padding: 0.75rem;
-    border-radius: 100px;
-    color: var(--text-gray);
-    border: solid 1px var(--text-gray);
-    cursor: pointer;
+#optahunt-floating-panel .logo-preview-box {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #222;
+  border-radius: 12px;
 }
 
-.optahunt-panel .choose-btn:hover {
-    background-color: #333;
-    border: solid 1px var(--text-gray);
+/* ------------------------------
+   BUTTONS
+-------------------------------- */
+#optahunt-floating-panel .choose-btn {
+  background-color: var(--border-gray);
+  padding: 0.75rem;
+  border-radius: 100px;
+  color: var(--text-gray);
+  border: solid 1px var(--text-gray);
+  cursor: pointer;
 }
 
-.optahunt-panel .color-indicator {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: white;
-    border-radius: 8px;
-    cursor: pointer;
+#optahunt-floating-panel .choose-btn:hover {
+  background-color: #333;
 }
 
-.optahunt-panel .color-indicator:hover {
-    opacity: 0.9;
+#optahunt-floating-panel .profile-btn {
+  background: none;
+  border: 2px solid #333;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 100%;
+  transition: var(--transition);
 }
 
-.optahunt-panel .logo-preview-box {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: #222;
-    border-radius: 12px;
+#optahunt-floating-panel .profile-btn:hover,
+#optahunt-floating-panel .profile-btn:active {
+  border-color: var(--accent-purple);
 }
 
-.optahunt-panel .profile-btn { 
-    background: none; 
-    border: 2px solid #333; 
-    cursor: pointer; 
-    padding: 2px; 
-    border-radius: 100%; 
-    transition: var(--transition); 
+#optahunt-floating-panel .profile-btn img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: block;
 }
 
-.optahunt-panel .profile-btn img { 
-    width: 2rem; 
-    height: 2rem; 
-    border-radius: 50%; 
-    display: block; 
+#optahunt-floating-panel .close-btn {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
 }
 
-.optahunt-panel .close-btn { 
-    background: #1a1a1a; 
-    border: 1px solid #333; 
-    width: 2.75rem; 
-    height: 2.75rem; 
-    border-radius: 100px; 
-    cursor: pointer; 
-    transition: var(--transition);
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    padding: 12px;
+#optahunt-floating-panel .close-btn:hover {
+  border-color: #555;
+  background: #222;
 }
 
-.optahunt-panel .close-btn svg path { 
-    fill: var(--text-gray); 
-    transition: fill 0.2s; 
+#optahunt-floating-panel .close-btn svg path {
+  fill: var(--text-gray);
+  transition: fill 0.2s;
 }
 
-.optahunt-panel .close-btn:hover svg path { 
-    fill: white; 
+#optahunt-floating-panel .close-btn:hover svg path {
+  fill: white;
 }
 
-/* Tabs Navigation */
-.optahunt-panel .tab-nav { 
-    display: flex; 
-    background: #151515; 
-    padding: 4px; 
-    border-radius: 100px; 
+/* ------------------------------
+   COLOR PICKER
+-------------------------------- */
+#optahunt-floating-panel .color-indicator {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: white;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-.optahunt-panel .tab { 
-    flex: 1; 
-    background: none; 
-    border: none; 
-    padding: 12px; 
-    color: var(--text-white); 
-    border-radius: 100px; 
-    cursor: pointer; 
-    font-weight: 500; 
-    transition: var(--transition); 
+#optahunt-floating-panel .color-indicator:hover {
+  opacity: 0.9;
 }
 
-.optahunt-panel .tab.active { 
-    background: var(--accent-purple); 
-    box-shadow: 0 4px 12px rgba(127, 3, 252, 0.3); 
+/* ------------------------------
+   TABS
+-------------------------------- */
+#optahunt-floating-panel .tab-nav {
+  display: flex;
+  background: #151515;
+  padding: 4px;
+  border-radius: 100px;
 }
 
-/* Forms & Inputs */
-.optahunt-panel .input-group { 
-    margin-bottom: 20px; 
+#optahunt-floating-panel .tab {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 12px;
+  color: var(--text-white);
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
 }
 
-.optahunt-panel .input-group label { 
-    display: block; 
-    color: var(--text-gray); 
-    font-size: 14px; 
-    margin-bottom: 10px; 
+#optahunt-floating-panel .tab:not(.active):hover {
+  background: rgba(255, 255, 255, 0.03);
 }
 
-.optahunt-panel input[type="text"] {
-    width: 100%; 
-    background: var(--input-bg); 
-    border: 2px solid transparent; 
-    padding: 16px; 
-    border-radius: 32px; 
-    color: white; 
-    font-size: 15px; 
-    outline: none; 
-    transition: var(--transition);
+#optahunt-floating-panel .tab.active {
+  background: var(--accent-purple);
+  box-shadow: 0 4px 12px rgba(127, 3, 252, 0.3);
 }
 
-.optahunt-panel input[type="text"]:focus { 
-    border-color: var(--accent-purple); 
-    background: #111; 
+/* ------------------------------
+   VIEWS
+-------------------------------- */
+#optahunt-floating-panel .view {
+  display: none;
 }
 
-.optahunt-panel .input-pill {
-    display: flex; 
-    align-items: center; 
-    background: var(--input-bg); 
-    border-radius: 100px; 
-    padding: 6px 16px; 
-    gap: 12px; 
-    width: 100%; 
-    border: 2px solid transparent; 
-    transition: var(--transition);
+#optahunt-floating-panel .view.active {
+  display: block;
 }
 
-.optahunt-panel .branding-field { 
-    background: transparent !important; 
-    border: none !important; 
-    flex: 1; 
-    color: white; 
-    font-size: 15px; 
-    outline: none; 
+/* ------------------------------
+   INPUTS
+-------------------------------- */
+#optahunt-floating-panel .input-group {
+  margin-bottom: 20px;
 }
 
-/* Footer */
-.optahunt-panel .panel-footer { 
-    border-top: 1px solid var(--border-gray); 
-    margin-top: 25px; 
-    padding-top: 15px; 
-    display: flex; 
-    justify-content: space-between; 
+#optahunt-floating-panel .input-group label {
+  display: block;
+  color: var(--text-gray);
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
-.optahunt-panel .copyright-text, 
-.optahunt-panel .status-ready { 
-    font-size: 12px; 
-    color: var(--text-gray); 
+#optahunt-floating-panel input[type="text"],
+#optahunt-floating-panel .custom-select {
+  width: 100%;
+  background: var(--input-bg);
+  border: 2px solid transparent;
+  padding: 16px;
+  border-radius: 32px;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  transition: var(--transition);
 }
 
-/* Utilities */
-.optahunt-panel .view { display: none; }
-.optahunt-panel .view.active { display: block; }
+#optahunt-floating-panel input[type="text"]:focus {
+  border-color: var(--accent-purple);
+  background: #111;
+}
+
+#optahunt-floating-panel .input-pill {
+  display: flex;
+  align-items: center;
+  background: var(--input-bg);
+  border-radius: 100px;
+  padding: 6px 16px;
+  gap: 12px;
+  width: 100%;
+  border: 2px solid transparent;
+  transition: var(--transition);
+}
+
+#optahunt-floating-panel .input-pill:focus-within {
+  border-color: var(--accent-purple);
+  background: #111;
+}
+
+#optahunt-floating-panel .branding-field {
+  background: transparent !important;
+  border: none !important;
+  flex: 1;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+/* ------------------------------
+   PRIMARY ACTION
+-------------------------------- */
+#optahunt-floating-panel .apply-btn {
+  width: 100%;
+  background: var(--accent-purple);
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 100px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#optahunt-floating-panel .btn-outer:hover {
+  border-color: #333;
+}
+
+#optahunt-floating-panel .apply-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+}
+
+#optahunt-floating-panel .apply-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ------------------------------
+   SECONDARY ACTION
+-------------------------------- */
+#optahunt-floating-panel .secondary-outer {
+  border-color: #151515;
+}
+
+#optahunt-floating-panel .signup-btn {
+  width: 100%;
+  background: transparent !important;
+  border: 1px solid #222 !important;
+  color: var(--text-gray);
+}
+
+#optahunt-floating-panel .signup-btn:hover {
+  color: white;
+  background: #151515 !important;
+  border-color: #444 !important;
+}
+
+/* ------------------------------
+   FOOTER
+-------------------------------- */
+#optahunt-floating-panel .panel-footer {
+  border-top: 1px solid var(--border-gray);
+  margin-top: 25px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#optahunt-floating-panel .copyright-text,
+#optahunt-floating-panel .status-ready {
+  font-size: 12px;
+  color: var(--text-gray);
+}
+
+#optahunt-floating-panel .status-ready span {
+  color: var(--text-white);
+  font-weight: 600;
+}
