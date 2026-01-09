@@ -29,10 +29,10 @@
    PANEL SHELL
 -------------------------------- */
 #optahunt-floating-panel .optahunt-wrapper {
-  width: 18rem; /* Reduced from 30rem */
+  width: 22rem; /* Reduced from 30rem */
   background: var(--bg-black);
-  border-radius: 24px; /* Slightly smaller radius for smaller width */
-  padding: 20px; /* Reduced from 32px */
+  border-radius: 1.25rem; /* Slightly smaller radius for smaller width */
+  padding: 1rem; /* Reduced from 32px */
   border: 1px solid var(--border-gray);
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
@@ -110,6 +110,8 @@
   border-radius: 100%;
   transition: var(--transition);
   display: flex;
+  width: 1.5rem;
+   height: 1.5rem;
 }
 
 #optahunt-floating-panel .profile-btn:hover {
